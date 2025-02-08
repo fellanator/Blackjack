@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "blackjack.css">
+    <title>South Croatian Famine Blackjack</title>
+    <style>
+        #bet
+        {
+            max-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id = "container">
+<div>
+    <div id = "Foestats">
+
+        <p>Foe's fingers left: <span id = "Foefingers">5</span></p>
+        <p>Foe's eyes left: <span id = "foeEyes">2</span></p>
+        <div id = "foeCards"></div>
+        
+        
+    </div>
+</div>
+<div id = "foeImage"><img id = "enemyImage" src = "images/Shadow-dude1.png" alt = "foe" width = "400px" height = "400px"></div>
+<div id = "gameAnnouncements"></div>
+
+
+<div id = "playContainer">
+    <div id = "stats">
+
+        <p>Your fingers left: <span id = "fingers">5</span></p>
+        <p>Eyes left: <span id = "eyes">2</span></p>
+        <div id = "playerCards"></div>
+        
+        
+    </div>
+    <div>
+<div id = "playspace">
+<div id = "actions">
+    <label for = "bet">Place a bet:</label>
+    <input type="number" id="bet" name="bet" min="1" max="5" value = "1">
+    <button id = "betPlace" onclick = "bet()">Place bet</button>
+   <!-- <button id = "start" onclick = "start()">start</button> -->
+    <div id = "stand"></div>
+</div>
+
+
+</div>
+<div class = "announcementContainer">
+
+<div id = "eyeAnnounce"></div>
+<div id = "continue"></div>
+</div>
+
+
+<div id = "reset"></div>
+</div>
+<div>
+    <p id = "results"></p>
+    <div style = "display:flex; align-items: center;">
+        <p>Dialogue:</p>
+    <p id = "dialogue"></p>
+    </div>
+</div>
+</div>
+</div>
+    <script src = "blackjack.js"></script>
+</body>
+</html>
+
+
+

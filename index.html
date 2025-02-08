@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Croatian Famine Blackjack</title>
+    <style>
+        body
+        {
+            background-image: url(images/menu.png);
+            background-color: black;
+        }
+        #play
+        {
+            padding:30px;
+           max-height: 80px;
+           
+           
+        }
+        #storyContainer
+        {
+            width:10em;
+            margin: 0 auto;
+            font-size: 2em;
+            letter-spacing: 2px;
+            
+        }
+        #blackJackButton
+        {
+            padding:30px; 
+            background-color:rgba(255,255,255,0.1); 
+            border: 1px solid white;
+            color: white;
+            transition: transform 300ms ease-in-out;
+        }
+        #blackJackButton:hover
+        {
+            
+            transform: scale(1.15);
+        }
+    </style>
+</head>
+<body>
+    <div id = "container">
+<div id = "buttonCont" style = "width: fit-content; display: flex; margin: 0 auto; height:50vh; flex-direction: column; justify-content: flex-end;">
+    <button id = "play" onclick = "play()">Play</button>
+</div>
+</div>
+
+    <script src = "menu.js"></script>
+</body>
+</html>
