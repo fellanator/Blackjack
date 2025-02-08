@@ -906,7 +906,7 @@ function results()
     {
         document.getElementById("reset").innerHTML =
         `
-        <button onclick = "death()">You have won!</button>
+        <button onclick = "win()">You have won!</button>
         `;
     }
 }
@@ -988,29 +988,21 @@ function death()
        //switching foes
 if(!die && gameStart != 0)
 {
-   
+    imageSwitch = 0;
+    eyeChop = false;
+    console.log("switched");
+    console.log(eyes);
+    eyes = eyes;
+    currentFoe.theme[0].pause();
+    currentFoe.theme[0].currentTime = 0;
+    switcher++
+    currentFoe = foes[switcher];
+    currentFoe.theme[0].play();
     
-    if(switcher > 2)
-    {
-        //win condition
-        window.location.href = "gameWin.html";
-        //placeholder code to prevent errors
-    }else
-    {
-        imageSwitch = 0;
-        eyeChop = false;
-        console.log("switched");
-        console.log(eyes);
-        eyes = eyes;
-        currentFoe.theme[0].pause();
-        currentFoe.theme[0].currentTime = 0;
-        switcher++
-        currentFoe = foes[switcher];
-        currentFoe.theme[0].play();
-        
-        document.getElementById("enemyImage").src = currentFoe.images[imageSwitch];
-        console.log(eyes);
-    }
+     
+    document.getElementById("enemyImage").src = currentFoe.images[imageSwitch];
+    console.log(eyes);
+    
 }else
 {
     
@@ -1157,4 +1149,9 @@ if(!die && gameStart != 0)
     }
    
    
+}
+
+function win()
+{
+    window.location.href = "gameWin.html";
 }
