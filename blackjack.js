@@ -988,16 +988,7 @@ function death()
        //switching foes
 if(!die && gameStart != 0)
 {
-    imageSwitch = 0;
-    eyeChop = false;
-    console.log("switched");
-    console.log(eyes);
-    eyes = eyes;
-    currentFoe.theme[0].pause();
-    currentFoe.theme[0].currentTime = 0;
-    switcher++
-    currentFoe = foes[switcher];
-    currentFoe.theme[0].play();
+   
     
     if(switcher > 2)
     {
@@ -1006,6 +997,16 @@ if(!die && gameStart != 0)
         //placeholder code to prevent errors
     }else
     {
+        imageSwitch = 0;
+        eyeChop = false;
+        console.log("switched");
+        console.log(eyes);
+        eyes = eyes;
+        currentFoe.theme[0].pause();
+        currentFoe.theme[0].currentTime = 0;
+        switcher++
+        currentFoe = foes[switcher];
+        currentFoe.theme[0].play();
         
         document.getElementById("enemyImage").src = currentFoe.images[imageSwitch];
         console.log(eyes);
