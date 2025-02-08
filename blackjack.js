@@ -113,6 +113,7 @@ const fingerGone = new Audio("audio/fingerGone.mp3");
 const eyeGone = new Audio("audio/eyeGone.mp3");
 const foeEyeGone = new Audio("audio/foeEyeGone.mp3");
 const foeFingerGone = new Audio("audio/foeFingerGone.mp3");
+const finalLaugh = new Audio("audio/finalLaugh.mp3");
 
 //variables for the enemies and their switchers
 let foe1 =
@@ -704,6 +705,7 @@ function results()
                 enemyBetMax = 0;
                if(foeChop == true)
                {
+                
                 foeEyeGone.play();
                 document.getElementById("eyeAnnounce").innerHTML = ``;
                 foeChop = false;
@@ -891,6 +893,9 @@ function results()
         `;
     }else if(foeEyes == 0 && !finalBoss)
     {
+        foeEyeGone.pause();
+        foeEyeGone.currentTime = 0;
+        finalLaugh.play();
         finalBoss = true;
         enemyBetMax = 10;
         foeEyes = 1;
