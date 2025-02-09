@@ -706,10 +706,19 @@ function results()
                if(foeChop == true)
                {
                 
-                foeEyeGone.play();
                 document.getElementById("eyeAnnounce").innerHTML = ``;
                 foeChop = false;
                 foeEyes--;
+                if(currentFoe != foes[2])
+                    {
+                    foeEyeGone.play();
+                    }else
+                    {
+                        if(foeEyes > 0)
+                        {
+                        foeEyeGone.play(); 
+                        }
+                    }
                 imageSwitch++
                 console.log("FOE EYE GONE");
                 nervous = 1;
@@ -893,8 +902,7 @@ function results()
         `;
     }else if(foeEyes == 0 && !finalBoss)
     {
-        foeEyeGone.pause();
-        foeEyeGone.currentTime = 0;
+       
         finalLaugh.play();
         finalBoss = true;
         enemyBetMax = 10;
