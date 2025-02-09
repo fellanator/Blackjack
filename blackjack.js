@@ -375,7 +375,7 @@ function hit()
 
 let check = true;
 let ran = Math.round(Math.random()* (12.499 - (-0.49)) + (-0.49));
-console.log(ran);
+
 
 
 //if ace is eleven, and then next hit is greater than 21, make ace able to be a one again. Also make sure multiple aces can be seperate values. such as one ace being a one value and another being an eleven.
@@ -391,8 +391,7 @@ while(check)
        {
         aceElevenCount--;
         hand -= 10;
-        console.log("Ace change");
-        console.log(aceElevenCount);
+        
        }
        if(ran < 10)
        {
@@ -418,7 +417,7 @@ while(check)
    else if(cards[ran] == cards[0] && !cards[0].amount == 0)
    {
     faceUp++
-    console.log("ace");
+    
    if(hand + 11 < 21 || hand + 11 == 21)
    {
     hand += 11;
@@ -470,11 +469,7 @@ enemyHit();
 let timer;
 function enemyHit()
 {
-    console.log(currentFoe);
-    console.log(intelligence1 + " int 1");
-    console.log(intelligence2  + " int 2");
-    console.log(aggression + " aggro");
-    console.log(nervous + " nerv");
+    
    
     enemyFinished = false;
     document.getElementById("actions").innerHTML =``;
@@ -515,9 +510,7 @@ while(check)
     {
     foeElevenCount--;
      enemyHand -= 10;
-     console.log(firstCard);
-     console.log("Foe ace change");
-     console.log(foeElevenCount);
+     
     }
     if(!foeFirst)
         {
@@ -542,7 +535,7 @@ while(check)
             firstCard = cards[ran].value;
             }else
             {
-                console.log(firstCard);
+                
                 firstCard = cards[ran].name;
             }
             document.getElementById("foeCards").innerHTML +=
@@ -569,9 +562,9 @@ while(check)
         `;
        }else
        {
-        console.log(firstCard);
+        
         firstCard = "Ace";
-        console.log(firstCard);
+        
         document.getElementById("foeCards").innerHTML +=
         `
         <div id = "cardSpec">Back</div>
@@ -590,9 +583,9 @@ while(check)
              `;
             }else
             {
-                console.log(firstCard);
+                
                 firstCard = "Ace";
-                console.log(firstCard);
+                
              document.getElementById("foeCards").innerHTML +=
              `
              <div id = "cardSpec">Back</div>
@@ -720,16 +713,16 @@ function results()
                         }
                     }
                 imageSwitch++
-                console.log("FOE EYE GONE");
+               
                 nervous = 1;
                 aggression = 0;
                 enemyBetMax = 5;
                 document.getElementById("enemyImage").src = currentFoe.images[imageSwitch];
-                console.log(imageSwitch);
+                
                }else
                {
                 foeFingerGone.play();
-               console.log("BOUTTA CHOP OUT DAT foe EYE");
+              
                foeChop = true;
                aggression = 0;
                nervous = 2;
@@ -750,7 +743,7 @@ function results()
             document.getElementById("dialogue").innerHTML = `${currentFoe.name}: `
             
         let ran = Math.round(Math.random()* (2.49 - (-0.49)) + (-0.49))
-        console.log(ran);
+        
         for(let i = 0; i < currentFoe.loseLines[ran].length; i++)
             {
                 
@@ -793,7 +786,7 @@ function results()
                 eyeGone.play();
                 document.getElementById("eyeAnnounce").innerHTML = ``;
                 eyeChop = false;
-                console.log("EYE GONE!");
+               
                 aggression = 2;
                 eyes--;
                 betMax = 5;
@@ -801,7 +794,7 @@ function results()
             }else
             {
             fingerGone.play();
-            console.log("BOUTTA CHOP OUT DAT EYE");
+            
             eyeChop = true;
             aggression = 1;
             nervous = 0;
@@ -907,7 +900,7 @@ function results()
         finalBoss = true;
         enemyBetMax = 10;
         foeEyes = 1;
-        console.log("it works dude");
+        
         imageSwitch++
         foes[2].theme[0].pause();
         foes[2].theme[0].currentTime = 0;
@@ -1003,8 +996,7 @@ if(!die && gameStart != 0)
 {
     imageSwitch = 0;
     eyeChop = false;
-    console.log("switched");
-    console.log(eyes);
+    
     eyes = eyes;
     currentFoe.theme[0].pause();
     currentFoe.theme[0].currentTime = 0;
@@ -1014,7 +1006,7 @@ if(!die && gameStart != 0)
     
      
     document.getElementById("enemyImage").src = currentFoe.images[imageSwitch];
-    console.log(eyes);
+    
     
 }else
 {
@@ -1027,7 +1019,7 @@ if(!die && gameStart != 0)
     instaFix = true;
     imageSwitch = 0;
     eyes = 2;
-    console.log("GAME OVER")
+    
     currentFoe.theme[0].pause();
     currentFoe.theme[0].currentTime = 0;
     foes[2].theme[1].pause();
@@ -1126,7 +1118,6 @@ if(!die && gameStart != 0)
     stopIntro = false;
     newGame = true;
     gameStart++;
-    console.log(eyes);
     finalBoss = false;
     if(newGame)
         {

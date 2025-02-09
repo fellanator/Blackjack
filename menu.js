@@ -6,7 +6,7 @@ function play()
     menuPlay.loop = true;
     menuPlay.play();
     let story ="South Croatia has been hit with a devastating famine. Your family is starving. You dont care about your family. But you do care for your dog. A rich noble is holding a dangerous game of blackjack in exchange for a lifetime supply of food. You must win to keep your dog from starving.";
-    console.log(story);
+
     document.body.style.backgroundImage = "url('images/lazyBack.jpg')";
     document.getElementById("buttonCont").innerHTML = ``;
     document.getElementById("container").innerHTML = 
@@ -17,7 +17,7 @@ function play()
     `;
     for(let i = 0; i < story.length; i++)
         {
-            console.log("hello")
+           
            setTimeout(() => {
         
             
