@@ -933,7 +933,7 @@ stopIdle = true;
     `
    <div id = "actions">
     <label for = "bet">Place a bet:</label>
-    <input type="number" id="bet" name="bet" min="1" max="${betMax + 1}" value = "1">
+    <input type="number" id="bet" name="bet" min="1" max="${betMax}" value = "1">
     <button id = "betPlace" onclick = "bet()">Place bet</button>
    <!-- <button id = "start" onclick = "start()">start</button> -->
     <div id = "stand"></div>
